@@ -44,7 +44,7 @@ public struct TtsModels: Sendable {
             modelNames: modelNames,
             directory: modelsDirectory,
             // Only a small fraction of the model can run on ANE, and compile time takes a long time because of the complicated arch
-            computeUnits: .cpuAndGPU
+            computeUnits: .cpuAndNeuralEngine
         )
         var loaded: [ModelNames.TTS.Variant: MLModel] = [:]
         var warmUpDurations: [ModelNames.TTS.Variant: TimeInterval] = [:]
